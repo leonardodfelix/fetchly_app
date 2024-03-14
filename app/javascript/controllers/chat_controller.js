@@ -30,7 +30,7 @@ export default class extends Controller {
   setupMessageListener() {
     this.styleExistingMessages();
 
-    this.messageObserver = new MutationObserver(() => {
+    this.messageObserver = new MutationObserver((mutations) => {
       this.styleAddedNodes(mutations);
     });
 
