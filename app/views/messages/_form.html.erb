@@ -6,7 +6,7 @@
     controller: "reset-form",
     action: "turbo:submit-end->reset-form#clearInput"
   },
-  class: "" do |form| %>
+  class: "") do |form| %>
 
   <%= form.text_field :body,
     id: "chat-input",
@@ -15,9 +15,9 @@
       target: "input"
       },
     placeholder: "Type a message"
-  <% end %>
+  %>
 
-  <%= form.button class: "" do %>
+  <%= form.button 'Send', class: "" do %>
     <i class="fas fa-paper-plane"></i>
   <% end %>
 
