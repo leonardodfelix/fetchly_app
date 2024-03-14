@@ -76,9 +76,9 @@ export default class extends Controller {
 
   applyStyle(messageBody, userId) {
     if (userId === this.currentUserIdValue) {
-      messageBody.classList.add("bg-blue-500", "text-white");
+      messageBody.classList.add("bg-blue-500", "text-white", "ml-auto", "p-1", "rounded");
     } else {
-      messageBody.classList.add("bg-gray-200", "text-gray-900");
+      messageBody.classList.add("bg-gray-200", "text-gray-900", "mr-auto", "p-1", "rounded");
     }
   }
 }

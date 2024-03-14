@@ -6,19 +6,20 @@
     controller: "reset-form",
     action: "turbo:submit-end->reset-form#clearInput"
   },
-  class: "") do |form| %>
+  class: "flex items-center") do |form| %>
 
   <%= form.text_field :body,
     id: "chat-input",
-    class: "",
+    class: "shadow appearance-none border rounded flex-1 py-2 px-3 mr-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
     data: {
       "reset-form-target": "input"
-      },
+    },
     placeholder: "Type a message"
   %>
 
-  <%= form.button 'Send', class: "" do %>
+  <%= form.button '', type: 'submit', class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full focus:outline-none focus:shadow-outline" do %>
     <i class="fas fa-paper-plane"></i>
   <% end %>
 
 <% end %>
+

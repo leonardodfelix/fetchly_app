@@ -4,15 +4,10 @@
   data-controller="chat"
   data-chat-current-user-id-value="<%= current_user.id %>">
 
-  <div id="messages">
+  <div id="messages" class="overflow-y-auto h-96 p-4 border border-gray-300 rounded-lg">
     <% @messages.each do |message| %>
-      <%= render partial: "messages/message",
-        locals: { 
-          message: message,
-          display_controls: message.user == current_user
-        } %>
+      <%= render partial: "messages/message", locals: { message: message, display_controls: message.user == current_user } %>
     <% end %>
-  </div>
-
+  </div> 
 </div>
 
