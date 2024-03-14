@@ -5,7 +5,7 @@
   data-chat-current-user-id-value="<%= current_user.id %>">
 
   <div id="messages">
-    <%= @messages.each do |message| %>
+    <% @messages.each do |message| %>
       <%= render partial: "messages/message",
         locals: { 
           message: message,
