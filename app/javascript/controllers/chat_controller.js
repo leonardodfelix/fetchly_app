@@ -19,7 +19,7 @@ export default class extends Controller {
 
     this.scrollObserver = new MutationObserver(() => {
       this.scrollToBottom();
-    }
+    });
 
     this.scrollObserver.observe(this.element, {
       childList: true,
@@ -70,7 +70,7 @@ export default class extends Controller {
     this.applyStyle(messageBody, userId);
   }
 
-  getMessageNode(message) {
+  getMessageNode(node) {
     return node.closest(".message") || node.querySelector(".message");
   }
 
