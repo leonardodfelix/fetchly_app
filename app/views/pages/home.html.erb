@@ -1,4 +1,14 @@
+<%= turbo_stream_from dom_id(current_user) %>
+
 <div>
-  <h1 class="font-bold text-4xl">Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
+  <div>
+    <h1>Fetchly Chatroom</h1>
+    <p>Hi, <%= current_user.username %></p>
+  </div>
+  <div>
+    <%= render partial: 'messages/chatbox', locals: { messages: @messages } %>
+  </div>
+  <div>
+  <%= render partial: 'messages/form', locals: { message: @message } %>
+  </div>
 </div>
